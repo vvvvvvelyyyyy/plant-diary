@@ -36,39 +36,39 @@
       --radius-sm: 12px;
       --tab-height: 70px;
       /* 页面主题色（默认=首页） */
-      --page-nav: #C4D7C2;
-      --page-nav-dark: #A9C8A6;
-      --page-accent: #8BC34A;
-      --page-card: #F3F7F1;
-      --page-soft: #EDF3EA;
-      --page-deep: #A9C8A6;
+      --page-nav: #8DB5D6;
+      --page-nav-dark: #7BA7C9;
+      --page-accent: #8DB5D6;
+      --page-card: #F0F6FA;
+      --page-soft: #E3EEF5;
+      --page-deep: #8DB5D6;
     }
 
-    /* ====== 各页面主题色（浅色同色系，统一和谐） ====== */
+    /* ====== 各页面主题色（差异化配色，仅花园用绿色系） ====== */
     body[data-page="home"] {
-      --page-nav: #C4D7C2; --page-nav-dark: #A9C8A6;
-      --page-accent: #8BC34A; --page-card: #F3F7F1;
-      --page-soft: #EDF3EA; --page-deep: #A9C8A6;
+      --page-nav: #8DB5D6; --page-nav-dark: #7BA7C9;
+      --page-accent: #8DB5D6; --page-card: #F0F6FA;
+      --page-soft: #E3EEF5; --page-deep: #8DB5D6;
     }
     body[data-page="garden"] {
-      --page-nav: #C9E3C7; --page-nav-dark: #A9D6A6;
-      --page-accent: #66BB6A; --page-card: #F2F8F1;
-      --page-soft: #EAF3E9; --page-deep: #9BC99B;
+      --page-nav: #9BBF8F; --page-nav-dark: #84AC77;
+      --page-accent: #9BBF8F; --page-card: #F3F8F1;
+      --page-soft: #E6F0E3; --page-deep: #9BBF8F;
     }
     body[data-page="flower"] {
-      --page-nav: #F6DDD0; --page-nav-dark: #F0C5B0;
-      --page-accent: #F2A97E; --page-card: #FFF6F2;
-      --page-soft: #FCEFE8; --page-deep: #EEB69A;
+      --page-nav: #F2C6B6; --page-nav-dark: #E8AE99;
+      --page-accent: #F2C6B6; --page-card: #FFF7F5;
+      --page-soft: #FCE9E3; --page-deep: #F2C6B6;
     }
     body[data-page="calendar"] {
-      --page-nav: #E8DCBC; --page-nav-dark: #DCC99B;
-      --page-accent: #D4B877; --page-card: #FCF9F0;
-      --page-soft: #F7F2E2; --page-deep: #DCC99B;
+      --page-nav: #E8D4A8; --page-nav-dark: #D8BF8C;
+      --page-accent: #E8D4A8; --page-card: #FAF9F4;
+      --page-soft: #F2EDDC; --page-deep: #E8D4A8;
     }
     body[data-page="me"] {
-      --page-nav: #D5DEE0; --page-nav-dark: #B8C9CC;
-      --page-accent: #9BB5B5; --page-card: #F4F7F7;
-      --page-soft: #E8EFF0; --page-deep: #A9BDC0;
+      --page-nav: #C4B5D4; --page-nav-dark: #AC98C2;
+      --page-accent: #C4B5D4; --page-card: #FFFFFF;
+      --page-soft: #EBE4F2; --page-deep: #C4B5D4;
     }
 
     * {
@@ -104,8 +104,8 @@
       line-height: 1.5;
       -webkit-font-smoothing: antialiased;
       user-select: none;
-      padding-top: env(safe-area-inset-top);
       padding-bottom: env(safe-area-inset-bottom);
+      padding-bottom: constant(safe-area-inset-bottom);
     }
     input, textarea {
       user-select: text;
@@ -136,20 +136,27 @@
     .page-header {
       background: var(--page-nav);
       padding: 0;
-      height: calc(env(safe-area-inset-top, 0px) + 56px);
-      height: calc(constant(safe-area-inset-top, 0px) + 56px);
+      padding-top: env(safe-area-inset-top, 0px);
+      padding-top: constant(safe-area-inset-top, 0px);
+      height: calc(env(safe-area-inset-top, 0px) + 54px);
+      height: calc(constant(safe-area-inset-top, 0px) + 54px);
       position: sticky;
       top: 0;
       z-index: 10;
       transition: background 0.3s;
       display: flex;
-      align-items: flex-end;
+      flex-direction: column;
+      align-items: center;
       justify-content: center;
       flex-shrink: 0;
+      margin-bottom: 20px;
     }
-    /* 顶部文字已移除（避免刘海屏遮挡），仅保留主题色细带 */
     .page-title {
-      display: none;
+      font-size: 18px;
+      font-weight: 700;
+      color: #FFFFFF;
+      text-align: center;
+      letter-spacing: 1px;
     }
     .page-subtitle {
       display: none;
@@ -664,7 +671,7 @@
     <div class="page-header">
       <div class="page-title">我的花园</div>
     </div>
-    <div style="padding: 0 16px 12px; position: sticky; top: calc(env(safe-area-inset-top, 0px) + 56px); background: var(--milk-tea); z-index: 9;">
+    <div style="padding: 0 16px 12px; position: sticky; top: calc(env(safe-area-inset-top, 0px) + 40px); background: var(--milk-tea); z-index: 9;">
       <div style="position: relative; margin-bottom: 10px;">
         <input type="text" id="search-input" class="input-field" placeholder="搜索植物昵称或品种..." style="padding-left:36px;">
         <svg style="position:absolute;left:10px;top:50%;transform:translateY(-50%);width:18px;height:18px;stroke:var(--text-light);fill:none;stroke-width:2;" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
@@ -700,7 +707,7 @@
     <div class="page-header">
       <div class="page-title">鲜花角</div>
     </div>
-    <div style="padding: 0 16px 12px; position: sticky; top: calc(env(safe-area-inset-top, 0px) + 56px); background: var(--milk-tea); z-index: 9;">
+    <div style="padding: 0 16px 12px; position: sticky; top: calc(env(safe-area-inset-top, 0px) + 40px); background: var(--milk-tea); z-index: 9;">
       <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;">
         <div style="position:relative;flex:1;">
           <input type="text" id="flower-search-input" class="input-field" placeholder="搜索花名..." style="padding-left:36px;">
@@ -3330,7 +3337,7 @@ async function renderMe() {
   }
 
   const statsCard = `
-    <div class="card" style="background:var(--page-deep);color:#fff;text-align:center;margin-top:12px;">
+    <div class="card" style="background:var(--page-deep);color:#fff;text-align:center;margin-top:16px;padding:12px;">
       <div style="font-size:14px;opacity:0.9;margin-bottom:8px;">数据总览</div>
       <div style="font-size:13px;line-height:1.8;">
         共养护 <b style="font-size:18px;">${activePlants.length}</b> 棵植物<br>
