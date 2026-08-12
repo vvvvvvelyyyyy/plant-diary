@@ -1,9 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-  <!-- 植间日记 App 图标：豆绿圆形背景 + 圆润可爱小绿植 + 超大花朵 -->
+  <!-- 植间日记 App 图标：方形圆角渐变背景 + 圆润可爱小绿植 + 超大花朵 -->
   <defs>
     <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#A8C3A6"/>
-      <stop offset="100%" style="stop-color:#8FBC8F"/>
+      <stop offset="100%" style="stop-color:#7BA87B"/>
     </linearGradient>
     <linearGradient id="leafGrad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#7FB06F"/>
@@ -13,11 +13,14 @@
       <stop offset="0%" style="stop-color:#E8B07E"/>
       <stop offset="100%" style="stop-color:#D18F5F"/>
     </linearGradient>
+    <linearGradient id="flowerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFFFFF"/>
+      <stop offset="100%" style="stop-color:#FFF5E8"/>
+    </linearGradient>
   </defs>
 
-  <!-- 圆形背景 -->
-  <circle cx="256" cy="256" r="250" fill="url(#bgGrad)"/>
-  <circle cx="256" cy="256" r="250" fill="none" stroke="#7BA87B" stroke-width="6"/>
+  <!-- 方形圆角背景 -->
+  <rect width="512" height="512" rx="110" fill="url(#bgGrad)"/>
 
   <!-- 中央小花盆 -->
   <path d="M196 352 L316 352 L302 428 C299 446 213 446 210 428 Z" fill="url(#potGrad)" stroke="#B87A4A" stroke-width="10" stroke-linejoin="round"/>
@@ -29,16 +32,16 @@
   <!-- 主茎 -->
   <path d="M256 348 Q250 270 254 210" stroke="#4F8A4F" stroke-width="12" fill="none" stroke-linecap="round"/>
 
-  <!-- 左侧圆润大叶（缩小一点，给花朵让空间） -->
+  <!-- 左侧圆润大叶 -->
   <path d="M255 300 C210 272 188 222 194 186 C232 184 260 232 255 300 Z" fill="url(#leafGrad)" stroke="#3F7A3F" stroke-width="8" stroke-linejoin="round"/>
   <path d="M218 254 C238 242 250 228 256 214" stroke="#7FB06F" stroke-width="7" fill="none" stroke-linecap="round"/>
 
-  <!-- 右侧圆润大叶（缩小一点） -->
+  <!-- 右侧圆润大叶 -->
   <path d="M261 322 C308 294 330 238 322 198 C284 196 260 248 261 322 Z" fill="url(#leafGrad)" stroke="#3F7A3F" stroke-width="8" stroke-linejoin="round"/>
   <path d="M298 276 C282 262 270 246 262 230" stroke="#7FB06F" stroke-width="7" fill="none" stroke-linecap="round"/>
 
   <!-- 顶部超大花朵 -->
-  <g fill="#FFFFFF" stroke="#D18F5F" stroke-width="7" stroke-linejoin="round">
+  <g fill="url(#flowerGrad)" stroke="#D18F5F" stroke-width="7" stroke-linejoin="round">
     <circle cx="248" cy="142" r="38"/>
     <circle cx="248" cy="96" r="38"/>
     <circle cx="204" cy="119" r="38"/>
