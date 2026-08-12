@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F5E6D3"/>
+      <stop offset="100%" style="stop-color:#E8D5BC"/>
+    </linearGradient>
+    <linearGradient id="leaf1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#A8C3A6"/>
+      <stop offset="100%" style="stop-color:#7BA87B"/>
+    </linearGradient>
+    <linearGradient id="leaf2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8FBC8F"/>
+      <stop offset="100%" style="stop-color:#6B9E6B"/>
+    </linearGradient>
+    <linearGradient id="pot" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#D4A574"/>
+      <stop offset="100%" style="stop-color:#B8956A"/>
+    </linearGradient>
+    <linearGradient id="flower" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFB7B2"/>
+      <stop offset="100%" style="stop-color:#E07A5F"/>
+    </linearGradient>
+  </defs>
+
+  <!-- 圆角背景 -->
+  <rect width="512" height="512" rx="120" fill="url(#bg)"/>
+
+  <!-- 花盆 -->
+  <path d="M196 340 l120 0 l-15 100 c-5 25 -85 25 -90 0 z" fill="url(#pot)"/>
+  <rect x="186" y="330" width="140" height="16" rx="8" fill="#C49A6C"/>
+
+  <!-- 泥土 -->
+  <ellipse cx="256" cy="340" rx="58" ry="12" fill="#A0785A"/>
+
+  <!-- 主茎 -->
+  <path d="M256 340 Q250 260 240 200" stroke="#7BA87B" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <path d="M256 340 Q262 270 272 210" stroke="#6B9E6B" stroke-width="6" fill="none" stroke-linecap="round"/>
+
+  <!-- 左叶子 -->
+  <path d="M248 280 Q200 260 175 290 Q200 310 248 280" fill="url(#leaf1)"/>
+  <path d="M175 290 Q185 285 195 295" stroke="#5A8F5A" stroke-width="2" fill="none"/>
+
+  <!-- 右叶子 -->
+  <path d="M264 270 Q310 250 330 280 Q300 305 264 270" fill="url(#leaf2)"/>
+  <path d="M330 280 Q318 275 308 285" stroke="#4F804F" stroke-width="2" fill="none"/>
+
+  <!-- 小花 -->
+  <circle cx="256" cy="170" r="20" fill="url(#flower)" opacity="0.9"/>
+  <circle cx="240" cy="155" r="14" fill="#FFD6D0"/>
+  <circle cx="272" cy="155" r="14" fill="#FFD6D0"/>
+  <circle cx="240" cy="185" r="14" fill="#FFC8C0"/>
+  <circle cx="272" cy="185" r="14" fill="#FFC8C0"/>
+  <circle cx="256" cy="170" r="8" fill="#FFF5C0"/>
+
+  <!-- 小星星装饰 -->
+  <circle cx="220" cy="140" r="3" fill="#FFD6D0" opacity="0.7"/>
+  <circle cx="290" cy="138" r="2.5" fill="#FFD6D0" opacity="0.7"/>
+  <circle cx="256" cy="130" r="2" fill="#FFD6D0" opacity="0.5"/>
+
+  <!-- 泥土小石子 -->
+  <circle cx="235" cy="345" r="3" fill="#8B6B4A" opacity="0.4"/>
+  <circle cx="265" cy="348" r="2" fill="#8B6B4A" opacity="0.4"/>
+  <circle cx="278" cy="342" r="2.5" fill="#8B6B4A" opacity="0.3"/>
+</svg>
