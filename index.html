@@ -478,6 +478,8 @@
       top: 0;
       background: var(--page-nav, var(--page-deep));
       padding: 10px 16px;
+      padding-top: calc(env(safe-area-inset-top, 0px) + 10px);
+      padding-top: calc(constant(safe-area-inset-top, 0px) + 10px);
       z-index: 5;
       margin: 0 -16px 16px;
       transition: background 0.3s;
