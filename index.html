@@ -127,6 +127,8 @@
       -webkit-overflow-scrolling: touch;
       display: none;
       flex-direction: column;
+      padding-top: calc(env(safe-area-inset-top, 0px) + 54px);
+      padding-top: calc(constant(safe-area-inset-top, 0px) + 54px);
     }
     .page.active {
       display: flex;
@@ -140,8 +142,10 @@
       padding-top: constant(safe-area-inset-top, 0px);
       height: calc(env(safe-area-inset-top, 0px) + 54px);
       height: calc(constant(safe-area-inset-top, 0px) + 54px);
-      position: sticky;
+      position: fixed;
       top: 0;
+      left: 0;
+      right: 0;
       z-index: 10;
       transition: background 0.3s;
       display: flex;
@@ -149,7 +153,6 @@
       align-items: center;
       justify-content: center;
       flex-shrink: 0;
-      margin-bottom: 20px;
     }
     .page-title {
       font-size: 18px;
